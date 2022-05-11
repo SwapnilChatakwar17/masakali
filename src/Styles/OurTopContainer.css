@@ -1,0 +1,131 @@
+.ourTopDishes {
+  height: calc(100vh - 3rem);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.ourTopContainer {
+  position: relative;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  height: 100%;
+  overflow-x: scroll;
+  padding-left: 4rem;
+  scroll-behavior: smooth;
+}
+
+.left,
+.right {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  z-index: 101;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  font-size: 22px;
+  cursor: pointer;
+  min-width: 50px;
+}
+
+.left {
+  left: 20px;
+  top: 45%;
+  background: #cbfa7c;
+}
+
+.left:hover {
+  filter: drop-shadow(0px 0px 2px #cbfa7c);
+}
+
+.right {
+  right: 20px;
+  top: 45%;
+  background: #ce0229;
+  color: #fff;
+}
+
+.right:hover {
+  filter: drop-shadow(0px 0px 2px #ce0229);
+}
+
+.card {
+  width: 225px;
+  height: 250px;
+  background: linear-gradient(#2b3638, #070c0e);
+  border-radius: 35px;
+  box-shadow: inset 2px 2px 5px rgba(255, 255, 255, 0.1),
+    inset -2px -2px 5px rgba(255, 255, 255, 0.1);
+  color: #f1f1f1;
+  position: relative;
+  margin: 0px 20px;
+  min-width: 225px;
+  min-height: 250px;
+}
+
+.card .imgBox {
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  /* background: #555; */
+  border-radius: 100%;
+  top: -30%;
+  left: 10px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card .imgBox i {
+  position: absolute;
+  top: 15%;
+  left: 3%;
+  background: #c8fa76;
+  width: 40px;
+  height: 40px;
+  color: #070b0f;
+  border-radius: 10px 10px 10px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  cursor: pointer;
+}
+.card .imgBox img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card .content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 20px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card .content h2 {
+  font-size: 18px;
+}
+
+.card .content h2 span {
+  display: block;
+  font-size: 14px;
+  color: #848484;
+}
+.card .content p {
+  margin-top: auto;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+@media screen and (min-width: 1080px) {
+  .left,
+  .right {
+    display: flex;
+  }
+}

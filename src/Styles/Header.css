@@ -1,0 +1,157 @@
+header {
+  z-index: 101;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  /* background: #070b0f; */
+  transition-timing-function: ease-in;
+  transition: all 0.5s;
+}
+
+.logo_img {
+  width: 6rem;
+}
+
+.toggleMenu {
+  font-size: 24px;
+  font-weight: 600;
+  color: #66d526;
+}
+
+.menu {
+  position: fixed;
+  background: linear-gradient(rgb(43, 53, 56), rgb(7, 11, 15));
+  width: 300px;
+  right: 0;
+  top: 60px;
+  height: 95%;
+  transform: translateX(100%);
+  transition: transform 0.3s cubic-bezier(0.5, -0.75, 0.7, 2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 80px;
+}
+
+.menu.show {
+  transform: translateX(0%);
+}
+.menu ul {
+  width: 100%;
+}
+
+.menu ul li {
+  margin: 30px 0px;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.menu ul li a {
+  color: #f1f1f1;
+  position: relative;
+  font-size: 18px;
+  font-family: cursive;
+}
+
+.menu ul li a::before,
+.menu ul li.active a::before {
+  width: 0%;
+  height: 2px;
+  position: absolute;
+  content: "";
+  bottom: -10px;
+  left: 0;
+  background: #66d526;
+}
+
+.menu ul li:hover a::before,
+.menu ul li.active a::before {
+  width: 100%;
+  transition: width 0.3s cubic-bezier(0.5, -0.75, 0.7, 2);
+}
+
+.menu .our_menu {
+  padding: 10px 25px;
+  border: 1px solid #496c18;
+  border-radius: 0.5rem;
+  color: #66d526;
+  margin-top: auto;
+}
+
+.menu .our_menu:hover {
+  box-shadow: 0px 0px 4px #496c18;
+}
+
+@media screen and (min-width: 680px) {
+  .logo_img {
+    width: 7rem;
+  }
+  .toggleMenu {
+    display: none;
+  }
+
+  .menu {
+    transform: translateX(0);
+    position: unset;
+    background: transparent;
+    flex-direction: row;
+    width: 100%;
+    justify-content: flex-end;
+    padding-bottom: 0px;
+  }
+
+  .menu ul {
+    display: flex;
+    width: unset;
+  }
+
+  .menu ul li {
+    margin: 0px 0px;
+  }
+  .menu ul li a {
+    font-size: 12px;
+  }
+
+  .menu .our_menu {
+    padding: 5px 15px;
+  }
+}
+
+@media screen and (min-width: 1080px) {
+  .logo_img {
+    width: 12.5rem;
+  }
+
+  .toggleMenu {
+    display: none;
+  }
+
+  .menu {
+    transform: translateX(0);
+    position: unset;
+    background: transparent;
+    flex-direction: row;
+    width: 100%;
+    justify-content: flex-end;
+    padding-bottom: 0px;
+  }
+
+  .menu ul {
+    display: flex;
+    width: unset;
+  }
+  .menu ul li {
+    margin: 0px 30px;
+  }
+
+  .menu ul li a {
+    font-size: 16px !important;
+  }
+}
